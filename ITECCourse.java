@@ -22,7 +22,7 @@ public class ITECCourse {
         this.maxStudents = courseMaxStudents;
     }
 
-    void addStudent(String studentName) {
+    public void addStudent(String studentName) {
         //if the number of students is the same as the max allowed, can't add any more.
         if (students.size()<this.maxStudents){
             students.add(studentName);
@@ -32,7 +32,7 @@ public class ITECCourse {
             System.out.println(this.name+" is full, max number of students is "+this.maxStudents+".  "+studentName+" was not added.\n");
         }
     }
-    void removeStudent(String studentName){
+    public void removeStudent(String studentName){
         if (students.contains(studentName)){
             students.remove(studentName);
             System.out.println(studentName+" was un-enrolled from "+this.name);
