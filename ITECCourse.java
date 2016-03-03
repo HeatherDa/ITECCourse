@@ -32,6 +32,17 @@ public class ITECCourse {
             System.out.println(this.name+" is full, max number of students is "+this.maxStudents+".  "+studentName+" was not added.\n");
         }
     }
+
+    public int getFreespace(){
+        int totstudent=getNumberOfStudents();
+        int maxstudent=getMaxStudents();
+        return maxstudent-totstudent;
+    }
+
+    public Integer getMaxStudents(){
+        return this.maxStudents;
+    }
+
     public void removeStudent(String studentName){
         if (students.contains(studentName)){
             students.remove(studentName);
@@ -69,7 +80,8 @@ public class ITECCourse {
             System.out.println(student);
         }
         System.out.println("There are " + getNumberOfStudents() + " students enrolled.");
-        System.out.println("The max number of students that can enroll in this course is " + this.maxStudents+".\n");
+        System.out.println("The max number of students that can enroll in this course is " + this.maxStudents+".");
+        System.out.println("There are "+getFreespace()+" places left in the course.\n");
     }
 }
 
