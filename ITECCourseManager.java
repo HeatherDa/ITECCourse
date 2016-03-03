@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class ITECCourseManager {
 
     public static void main(String args[]) {
-        ArrayList<ITECCourse>allcourses=new ArrayList<>();
+        ArrayList<ITECCourse>allcourses = new ArrayList<>();
         ITECCourse maintenanceCourse = new ITECCourse("Microcomputer Systems Maintenance", 1310, "T3020", 20);
         //Add some students
         maintenanceCourse.addStudent("Anna");
@@ -18,8 +18,7 @@ public class ITECCourseManager {
         maintenanceCourse.writeCourseInfo();
 
 
-        ITECCourse datacomCourse =
-            new ITECCourse("Data Communications", 1425, "T3021", 30);
+        ITECCourse datacomCourse = new ITECCourse("Data Communications", 1425, "T3021", 30);
         //Add some students
         datacomCourse.addStudent("Dave");
         datacomCourse.addStudent("Ed");
@@ -53,6 +52,10 @@ public class ITECCourseManager {
 
         allcourses.add(infoCourse);
         infoCourse.writeCourseInfo();
+
+        for(ITECCourse c:allcourses){
+           System.out.println(c.getCourseName()+" has "+c.getFreespace()+" free spaces left.");
+        }
     }
 }
 
